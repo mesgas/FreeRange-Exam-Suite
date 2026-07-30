@@ -7,6 +7,7 @@
 <div align="center">
 <img src="Vertical.png" width="900">
 </div>
+
 **FreeRange Exam Suite** is a powerful, lightweight, and fully offline desktop suite designed for IT certification exam preparation (Cisco CCNA/CCNP, CompTIA, AWS, Microsoft, etc.). 
 
 The suite consists of two standalone applications:
