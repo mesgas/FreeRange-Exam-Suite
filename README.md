@@ -77,24 +77,32 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 <div align="center">
 
 ### 🚀 Simulator in Action
-| Main Interface & Timer | Drag & Drop Mechanics |
+| Exam Setup | Drag & Drop Mechanics |
 | :---: | :---: |
-| <img src="screenshots/FreeRange%20Exam%20Suite%20(1).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(2).png" width="400"> |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(9).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(3).png" width="400"> |
 
 | Fill-in-the-Blank Questions | Exam Results & Analytics |
 | :---: | :---: |
-| <img src="screenshots/FreeRange%20Exam%20Suite%20(3).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(4).png" width="400"> |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(4).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(11).jpg" width="400"> |
+
+| Mistakes Report | Single Choice Exhibit |
+| :---: | :---: |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(10).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(5).pgn" width="400"> |
+
+| Multiple Choice | Multi-Language Selection |
+| :---: | :---: |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(7).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(1).pgn" width="400"> |
 
 <br>
 
 ### 🛠️ Exam Builder Engine
 | Builder Interface | Question Editor & DND Setup |
 | :---: | :---: |
-| <img src="screenshots/FreeRange%20Exam%20Suite%20(5).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(6).png" width="400"> |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(8).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(12).jpg" width="400"> |
 
-| Exhibit Attachment & Preview | Multi-Language Selection |
+| Exhibit Attachment & Preview | Fill-in-the-blank |
 | :---: | :---: |
-| <img src="screenshots/FreeRange%20Exam%20Suite%20(7).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(8).png" width="400"> |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(13).jpg" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(14).jpg" width="400"> |
 
 <br>
 
