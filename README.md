@@ -5,6 +5,8 @@
 ![Languages](https://img.shields.io/badge/languages-7_Supported-orange.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)
 
+<img src="Vertical.png" width="900">
+
 **FreeRange Exam Suite** is a powerful, lightweight, and fully offline desktop suite designed for IT certification exam preparation (Cisco CCNA/CCNP, CompTIA, AWS, Microsoft, etc.). 
 
 The suite consists of two standalone applications:
