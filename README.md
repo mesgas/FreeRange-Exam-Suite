@@ -13,7 +13,7 @@ The suite consists of two standalone applications:
 
 | Splash Simulator | Splash Builder |
 | :---: | :---: |
-| <img src="splash_bui.png" width="400"> | <img src="splash_sim.png" width="400"> |
+| <img src="splash_sim.png" width="400"> | <img src="splash_bui.png" width="400"> |
 
 ---
 
