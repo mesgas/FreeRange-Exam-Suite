@@ -1,0 +1,161 @@
+{
+  "Properties": {
+    "Title": "FreeRange Exam Suite - Official Comprehensive Demo Exam",
+    "ExamCode": "DEMO-101",
+    "TimeLimit": 60,
+    "Passmark": 800
+  },
+  "Sections": [
+    {
+      "Title": "General Knowledge & Feature Demonstration",
+      "Questions": [
+
+        {
+          "Id": 1,
+          "Topic": "Networking",
+          "Text": "Which TCP/IP protocol is responsible for resolving a logical IP address to a physical MAC address?",
+          "IsMultipleChoice": false,
+          "Answer": "B",
+          "Options": [
+            { "Alphabet": "A", "Text": "DNS (Domain Name System)" },
+            { "Alphabet": "B", "Text": "ARP (Address Resolution Protocol)" },
+            { "Alphabet": "C", "Text": "DHCP (Dynamic Host Configuration Protocol)" },
+            { "Alphabet": "D", "Text": "ICMP (Internet Control Message Protocol)" }
+          ]
+        },
+
+        {
+          "Id": 2,
+          "Topic": "Cybersecurity",
+          "Text": "Which TWO protocols use SSL/TLS encryption by default to secure communications over a network? (Select TWO)",
+          "IsMultipleChoice": true,
+          "Answers": "AC",
+          "Options": [
+            { "Alphabet": "A", "Text": "HTTPS (Port 443)" },
+            { "Alphabet": "B", "Text": "HTTP (Port 80)" },
+            { "Alphabet": "C", "Text": "FTPS (Port 990)" },
+            { "Alphabet": "D", "Text": "Telnet (Port 23)" }
+          ]
+        },
+
+        {
+          "Id": 3,
+          "Topic": "Cybersecurity",
+          "Text": "Which THREE components make up the core CIA Triad in information security? (Select THREE)",
+          "IsMultipleChoice": true,
+          "Answers": "ABD",
+          "Options": [
+            { "Alphabet": "A", "Text": "Confidentiality" },
+            { "Alphabet": "B", "Text": "Integrity" },
+            { "Alphabet": "C", "Text": "Authentication" },
+            { "Alphabet": "D", "Text": "Availability" },
+            { "Alphabet": "E", "Text": "Authorization" }
+          ]
+        },
+
+        {
+          "Id": 4,
+          "Topic": "Wireless Networks",
+          "IsFillInTheBlank": true,
+          "Text": "In Wi-Fi security, the WPA3 standard replaces WPA2 PSK with ___ authentication to mitigate offline dictionary attacks.",
+          "Blanks": [
+            "SAE"
+          ]
+        },
+
+        {
+          "Id": 5,
+          "Topic": "Cloud Computing",
+          "IsFillInTheBlank": true,
+          "Text": "In cloud service models, IaaS stands for Infrastructure as a Service, while PaaS stands for ___ as a Service and SaaS stands for ___ as a Service.",
+          "Blanks": [
+            "Platform",
+            "Software"
+          ]
+        },
+
+        {
+          "Id": 6,
+          "Topic": "OSI Model",
+          "IsDragAndDrop": true,
+          "Text": "Match each network device or Protocol Data Unit (PDU) to its corresponding layer of the OSI Model. Note: Not all items will be used.",
+          "Draggables": [
+            "Frame",
+            "Router",
+            "Segment",
+            "Switch",
+            "Coaxial Cable (Distractor)",
+            "Application Gateway (Distractor)"
+          ],
+          "Targets": [
+            {
+              "Label": "Layer 2 - Data Link (PDU)",
+              "Answer": "Frame"
+            },
+            {
+              "Label": "Layer 2 - Data Link (Device)",
+              "Answer": "Switch"
+            },
+            {
+              "Label": "Layer 3 - Network (Device)",
+              "Answer": "Router"
+            },
+            {
+              "Label": "Layer 4 - Transport (PDU)",
+              "Answer": "Segment"
+            }
+          ]
+        },
+
+        {
+          "Id": 7,
+          "Topic": "Troubleshooting Methodology",
+          "IsDragAndDrop": true,
+          "Text": "Place the initial steps of the standard IT troubleshooting methodology in the correct chronological order from Step 1 to Step 4.",
+          "Draggables": [
+            "1. Identify the problem",
+            "2. Establish a theory of probable cause",
+            "3. Test the theory to determine cause",
+            "4. Establish a plan of action",
+            "Escalate immediately to vendor (Distractor)",
+            "Document findings and outcomes (Distractor)"
+          ],
+          "Targets": [
+            {
+              "Label": "Step 1",
+              "Answer": "1. Identify the problem"
+            },
+            {
+              "Label": "Step 2",
+              "Answer": "2. Establish a theory of probable cause"
+            },
+            {
+              "Label": "Step 3",
+              "Answer": "3. Test the theory to determine cause"
+            },
+            {
+              "Label": "Step 4",
+              "Answer": "4. Establish a plan of action"
+            }
+          ]
+        },
+
+        {
+          "Id": 8,
+          "Topic": "Network Topology",
+          "Text": "Refer to the exhibit. Which network topology connects all devices to a central central hub or switch?",
+          "IsMultipleChoice": false,
+          "Answer": "C",
+          "Options": [
+            { "Alphabet": "A", "Text": "Bus Topology" },
+            { "Alphabet": "B", "Text": "Ring Topology" },
+            { "Alphabet": "C", "Text": "Star Topology" },
+            { "Alphabet": "D", "Text": "Mesh Topology" }
+          ],
+          "ExhibitBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+        }
+
+      ]
+    }
+  ]
+}
