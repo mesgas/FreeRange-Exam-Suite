@@ -87,11 +87,11 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 
 | Mistakes Report | Single Choice Exhibit |
 | :---: | :---: |
-| <img src="screenshots/FreeRange%20Exam%20Suite%20(10).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(5).pgn" width="400"> |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(10).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(5).png" width="400"> |
 
 | Multiple Choice | Multi-Language Selection |
 | :---: | :---: |
-| <img src="screenshots/FreeRange%20Exam%20Suite%20(7).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(1).pgn" width="400"> |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(7).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(1).png" width="400"> |
 
 <br>
 
