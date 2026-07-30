@@ -150,7 +150,7 @@ An optional `"ExhibitBase64"` field containing a Base64-encoded JPEG/PNG string 
 
 ---
 
-### 5. 📋 Full JSON Example Specification
+## 📋 Full JSON Example Specification
 
 ```json
 {
@@ -198,8 +198,7 @@ An optional `"ExhibitBase64"` field containing a Base64-encoded JPEG/PNG string 
           "Id": 3,
           "Topic": "Wireless Fundamentals",
           "IsFillInTheBlank": true,
-          "Text": "In a wireless network, the human-readable network name is the ___ while the physical MAC address of the Access Point radio is the ___ .",
-          "Blanks": [
+          "Text": "In a wireless network, the human-readable network name is the ___ while the physical MAC address of the Access Point radio is the ___ .",          "Blanks": [
             "SSID",
             "BSSID"
           ]
