@@ -6,7 +6,7 @@
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)
 <div align="center">
 <img src="Vertical.png" width="900">
-
+</div>
 **FreeRange Exam Suite** is a powerful, lightweight, and fully offline desktop suite designed for IT certification exam preparation (Cisco CCNA/CCNP, CompTIA, AWS, Microsoft, etc.). 
 
 The suite consists of two standalone applications:
@@ -16,7 +16,7 @@ The suite consists of two standalone applications:
 | Splash Simulator | Splash Builder |
 | :---: | :---: |
 | <img src="splash_sim.png" width="400"> | <img src="splash_bui.png" width="400"> |
-
+</div>
 ---
 
 ## ✨ Key Features
