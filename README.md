@@ -4,7 +4,7 @@
 ![Security](https://img.shields.io/badge/security-100%25_Offline_/_Air--Gapped-green.svg)
 ![Languages](https://img.shields.io/badge/languages-7_Supported-orange.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)
-
+<div align="center">
 <img src="Vertical.png" width="900">
 
 **FreeRange Exam Suite** is a powerful, lightweight, and fully offline desktop suite designed for IT certification exam preparation (Cisco CCNA/CCNP, CompTIA, AWS, Microsoft, etc.). 
@@ -12,7 +12,7 @@
 The suite consists of two standalone applications:
 1. **FreeRange Exam Simulator**: An interactive exam environment featuring realistic exam mechanics, timer controls, detailed topic statistics, and instant answer reviews.
 2. **FreeRange Exam Builder**: A visual GUI generator allowing users to create, edit, and export custom exam files in JSON format without writing a single line of code.
-
+<div align="center">
 | Splash Simulator | Splash Builder |
 | :---: | :---: |
 | <img src="splash_sim.png" width="400"> | <img src="splash_bui.png" width="400"> |
