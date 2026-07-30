@@ -11,6 +11,10 @@ The suite consists of two standalone applications:
 1. **FreeRange Exam Simulator**: An interactive exam environment featuring realistic exam mechanics, timer controls, detailed topic statistics, and instant answer reviews.
 2. **FreeRange Exam Builder**: A visual GUI generator allowing users to create, edit, and export custom exam files in JSON format without writing a single line of code.
 
+| Splash Simulator | Splash Builder |
+| :---: | :---: |
+| <img src="splash_bui.png" width="400"> | <img src="splash_sim.png" width="400"> |
+
 ---
 
 ## ✨ Key Features
