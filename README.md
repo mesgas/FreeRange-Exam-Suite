@@ -72,6 +72,47 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 
 ---
 
+## 📸 Application Screenshots
+
+<div align="center">
+
+### 🚀 Simulator in Action
+| Main Interface & Timer | Drag & Drop Mechanics |
+| :---: | :---: |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(1).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(2).png" width="400"> |
+
+| Fill-in-the-Blank Questions | Exam Results & Analytics |
+| :---: | :---: |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(3).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(4).png" width="400"> |
+
+<br>
+
+### 🛠️ Exam Builder Engine
+| Builder Interface | Question Editor & DND Setup |
+| :---: | :---: |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(5).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(6).png" width="400"> |
+
+| Exhibit Attachment & Preview | Multi-Language Selection |
+| :---: | :---: |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(7).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(8).png" width="400"> |
+
+<br>
+
+<details>
+<summary><b>🔍 Click here to view all screenshots in full detail (Images 9 & 10)</b></summary>
+<br>
+
+<p align="center">
+  <img src="screenshots/FreeRange%20Exam%20Suite%20(9).png" width="80%"><br><br>
+  <img src="screenshots/FreeRange%20Exam%20Suite%20(10).png" width="80%">
+</p>
+
+</details>
+
+</div>
+
+---
+
 ## 📦 Installation & Quick Start
 
 ### Pre-compiled Installer (Recommended)
