@@ -284,113 +284,103 @@ An optional `"ExhibitBase64"` field containing a Base64-encoded JPEG/PNG string 
 
 Do you have PDF dumps or text files from certification exams? You can use AI (like ChatGPT, Claude, or Gemini) to automatically convert raw text into the FreeRange JSON format, complete with generated explanations!
 
-Copy and paste the following prompt into your favorite AI, then paste your raw exam questions.
+Copy and paste the following prompt into your favorite AI, then paste your raw exam questions. You can save the output directly as a `.json` file and load it into the Simulator!
 
 <details>
 <summary><b>Click to expand and copy the AI Prompt</b></summary>
 
 > You are an expert IT certification instructor and a strict JSON data converter.
-> I will provide you with raw text extracted from certification exam dumps. Your task is to convert these questions into a specific JSON array format compatible with the FreeRange Exam Suite.
+> I will provide you with raw text extracted from certification exam dumps. Your task is to convert these questions into a COMPLETE, valid JSON file compatible with the FreeRange Exam Suite.
 > 
 > You MUST generate a brief, accurate explanation for the correct answer in the `Explanation` field for every question.
 > 
-> **CRITICAL RULE**: You must choose ONE of the following precise JSON structures based on the question type. Do NOT mix fields between types (e.g., never put "Targets" in a Multiple Choice question).
+> **CRITICAL RULE**: The output MUST be a single, complete JSON object following this exact structure. Place all the converted questions inside the `"Questions"` array. Choose ONE of the specific question templates for each question based on its type. Do NOT mix fields between types.
 > 
-> ---
-> **TEMPLATE 1: SINGLE CHOICE**
 > ```json
-{
-  "Properties": {
-    "Title": "Cisco CCNA - Full Practice Exam",
-    "ExamCode": "200-301",
-    "TimeLimit": 90,
-    "Passmark": 825
-  },
-  "Sections": [
-    {
-      "Title": "General",
-      "Questions": [
-
-        {
-          "Id": 1,
-          "Topic": "Network Fundamentals",
-          "Text": "Which protocol operates at the Transport Layer (Layer 4) of the OSI model?",
-          "IsMultipleChoice": false,
-          "Answer": "A",
-          "Options": [
-            { "Alphabet": "A", "Text": "TCP (Transmission Control Protocol)" },
-            { "Alphabet": "B", "Text": "IP (Internet Protocol)" },
-            { "Alphabet": "C", "Text": "HTTP (Hypertext Transfer Protocol)" },
-            { "Alphabet": "D", "Text": "Ethernet" }
-          ],
-          "ExhibitBase64": "OPTIONAL_BASE64_IMAGE_STRING"
-        },
-
-        {
-          "Id": 2,
-          "Topic": "Network Fundamentals",
-          "Text": "Select the TWO protocols that operate at the Application Layer.",
-          "IsMultipleChoice": true,
-          "Answers": "AC",
-          "Options": [
-            { "Alphabet": "A", "Text": "DNS" },
-            { "Alphabet": "B", "Text": "ICMP" },
-            { "Alphabet": "C", "Text": "HTTPS" },
-            { "Alphabet": "D", "Text": "UDP" }
-          ]
-        },
-
-        {
-          "Id": 3,
-          "Topic": "Wireless Fundamentals",
-          "IsFillInTheBlank": true,
-          "Text": "In a wireless network, the human-readable network name is the ___ while the physical MAC address of the Access Point radio is the ___ .",
-          "Blanks": [
-            "SSID",
-            "BSSID"
-          ]
-        },
-
-        {
-          "Id": 4,
-          "Topic": "OSI Model",
-          "IsDragAndDrop": true,
-          "Text": "Match each Protocol Data Unit (PDU) to its corresponding OSI Layer.",
-          "Draggables": [
-            "Frame",
-            "Packet",
-            "Segment",
-            "Data",
-            "Bits (Unused Distractor)"
-          ],
-          "Targets": [
-            {
-              "Label": "Layer 2 - Data Link",
-              "Answer": "Frame"
-            },
-            {
-              "Label": "Layer 3 - Network",
-              "Answer": "Packet"
-            },
-            {
-              "Label": "Layer 4 - Transport",
-              "Answer": "Segment"
-            }
-          ]
-        }
-
-      ]
-    }
-  ]
-}
+> {
+>   "Properties": {
+>     "Title": "AI Generated Practice Exam",
+>     "ExamCode": "AUTO-GEN",
+>     "TimeLimit": 120,
+>     "Passmark": 800
+>   },
+>   "Sections": [
+>     {
+>       "Title": "General Knowledge",
+>       "Questions": [
+> 
+>         // TEMPLATE 1: SINGLE CHOICE
+>         {
+>           "Id": 1,
+>           "Topic": "Infer short category",
+>           "Text": "Question text here?",
+>           "IsMultipleChoice": false,
+>           "Answer": "A",
+>           "Options": [
+>             { "Alphabet": "A", "Text": "First option" },
+>             { "Alphabet": "B", "Text": "Second option" }
+>           ],
+>           "Explanation": "Generated explanation of why A is correct."
+>         },
+> 
+>         // TEMPLATE 2: MULTIPLE CHOICE (2 or more correct answers)
+>         {
+>           "Id": 2,
+>           "Topic": "Infer short category",
+>           "Text": "Select two protocols:",
+>           "IsMultipleChoice": true,
+>           "Answers": ["A", "C"],
+>           "Options": [
+>             { "Alphabet": "A", "Text": "First option" },
+>             { "Alphabet": "B", "Text": "Second option" },
+>             { "Alphabet": "C", "Text": "Third option" }
+>           ],
+>           "Explanation": "Generated explanation of why A and C are correct."
+>         },
+> 
+>         // TEMPLATE 3: DRAG AND DROP (Matching / Ordering)
+>         {
+>           "Id": 3,
+>           "Topic": "Infer short category",
+>           "Text": "Match the items to their layers.",
+>           "IsDragAndDrop": true,
+>           "Draggables": [
+>             "Item 1",
+>             "Item 2",
+>             "Unused Distractor"
+>           ],
+>           "Targets": [
+>             { "Label": "Drop Zone 1", "Answer": "Item 1" },
+>             { "Label": "Drop Zone 2", "Answer": "Item 2" }
+>           ],
+>           "Explanation": "Generated explanation of the matching logic."
+>         },
+> 
+>         // TEMPLATE 4: FILL IN THE BLANK
+>         // (Replace the missing words in the Text with exactly three underscores ___)
+>         {
+>           "Id": 4,
+>           "Topic": "Infer short category",
+>           "Text": "The protocol is ___ and the port is ___.",
+>           "IsFillInTheBlank": true,
+>           "Blanks": [
+>             "HTTP",
+>             "80"
+>           ],
+>           "Explanation": "Generated explanation for the blanks."
+>         }
+> 
+>       ]
+>     }
+>   ]
+> }
 > ```
-> ---
 > 
 > **STRICT OUTPUT CONSTRAINTS:**
 > 1. Output ONLY valid, parsable JSON.
-> 2. The output MUST be a single JSON array containing the question objects: `[ { ... }, { ... } ]`.
+> 2. The output MUST start with `{ "Properties":` and end with the closing `}` of the root object.
 > 3. Escape all quotes inside strings properly (`\"`).
-> 4. Do NOT output any markdown formatting (do not use ```json). Start directly with `[` and end with `]`.
+> 4. Do NOT output any markdown formatting (do not use ```json code blocks). Start directly with `{` and end with `}`.
 
 </details>
 
