@@ -108,11 +108,11 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 ### 🛠️ Exam Builder Engine
 | Builder Interface | Question Editor & DND Setup |
 | :---: | :---: |
-| <img src="screenshots/FreeRange%20Exam%20Suite%20(11).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(14).jpg" width="400"> |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(11).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(14).png" width="400"> |
 
 | Exhibit Attachment & Preview | Fill-in-the-blank |
 | :---: | :---: |
-| <img src="screenshots/FreeRange%20Exam%20Suite%20(13).jpg" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(13).png" width="400"> |
+| <img src="screenshots/FreeRange%20Exam%20Suite%20(15).png" width="400"> | <img src="screenshots/FreeRange%20Exam%20Suite%20(13).png" width="400"> |
 
 <br>
 
