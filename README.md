@@ -134,7 +134,7 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 ## 📦 Installation & Quick Start
 
 ### EXE Package (Recommended)
-1. Download `FreeRangeExamSuite_3.6.0.0.exe` from the [Releases](../../releases) section or install it directly via the **Microsoft Store**. (Certification still in progress)
+1. Download `FreeRange_Exam_Suite_Setup_v3.6.0.exe` from the [Releases](../../releases) section or install it directly via the **Microsoft Store**. (Certification still in progress)
 2. Double-click the `.exe` file to launch the native Windows App Installer.
 3. Launch **FreeRange Exam Simulator** or **FreeRange Exam Builder** directly from the Start Menu.
 
@@ -197,7 +197,8 @@ Set "IsDragAndDrop": true.
 "Targets" (Array of Objects): Contains target slots with "Label" (category name or step number) and the correct "Answer".
 
 📋 Full JSON Example Specification
-JSON
+
+
 {
   "Properties": {
     "Title": "Cisco CCNA - Full Practice Exam",
@@ -282,6 +283,8 @@ JSON
     }
   ]
 }
+
+
 ⚖️ License & Legal
 Copyright © 2026 mesgas (Mario Messina). All rights reserved.
 
