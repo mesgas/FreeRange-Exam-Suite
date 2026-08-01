@@ -165,10 +165,10 @@ At the top level, every exam file consists of `Properties` (global metadata) and
 ```
 
 ### Metadata Fields
-* `Title (String)`: Display name of the exam.
-* `ExamCode (String)`: Optional code (e.g., 200-301, SY0-701).
-* `TimeLimit (Integer)`: Duration of the exam in minutes.
-* `Passmark (Integer)`: Minimum passing score out of 1000.
+** `Title (String)`: Display name of the exam.
+** `ExamCode (String)`: Optional code (e.g., 200-301, SY0-701).
+** `TimeLimit (Integer)`: Duration of the exam in minutes.
+** `Passmark (Integer)`: Minimum passing score out of 1000.
 
 ### ❓ Question Types & Definitions
 An optional `"ExhibitBase64"` field containing a Base64-encoded JPEG/PNG string can be added to any question type to attach an image/diagram.
@@ -182,14 +182,14 @@ An optional `"ExhibitBase64"` field containing a Base64-encoded JPEG/PNG string 
  * Set `"Answers"` to all correct letters concatenated (e.g., `"AC"` for options A and C) or an array of strings.
 
 3. Fill-in-the-Blank
- * Set "IsFillInTheBlank": true.
- * Place three underscores (___) in the "Text" field for every required answer.
- * Define "Blanks" or "Answers" as an array containing the exact text values for each placeholder in sequence.
+ * Set `"IsFillInTheBlank": true`.
+ * Place three underscores (`___`) in the `"Text"` field for every required answer.
+ * Define `"Blanks"` or `"Answers"` as an array containing the exact text values for each placeholder in sequence.
 
 4. Drag & Drop (Matching, Ordering & Distractors)
- * Set "IsDragAndDrop": true.
- * "Draggables" (Array of Strings): Contains all draggable items, including correct answers and optional distractors (extra items that don't belong to any target).
- * "Targets" (Array of Objects): Contains target slots with "Label" (category name or step number) and the correct "Answer".
+ * Set `"IsDragAndDrop": true.`
+ * `"Draggables"` (Array of Strings): Contains all draggable items, including correct answers and optional distractors (extra items that don't belong to any target).
+ * "Targets" (Array of Objects): Contains target slots with `"Label"` (category name or step number) and the correct `"Answer"`.
 
 ### 📋 Full JSON Example Specification
 
