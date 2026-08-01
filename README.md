@@ -143,7 +143,7 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 The FreeRange Exam Suite uses standard JSON files to load exam questions, properties, and exhibits. This document outlines the schema specification and provides examples for all supported question types.
 
 🛠️ General Schema Overview
-At the top level, every exam file consists of Properties (global metadata) and Sections containing an array of Questions.
+At the top level, every exam file consists of `Properties` (global metadata) and `Sections` containing an array of `Questions`.
 
 ```JSON
 
@@ -164,34 +164,34 @@ At the top level, every exam file consists of Properties (global metadata) and S
 }
 ```
 
-## Metadata Fields
-* 'Title (String)': Display name of the exam.
-* 'ExamCode (String)': Optional code (e.g., 200-301, SY0-701).
-* 'TimeLimit (Integer)': Duration of the exam in minutes.
-* 'Passmark (Integer)': Minimum passing score out of 1000.
+### Metadata Fields
+* `Title (String)`: Display name of the exam.
+* `ExamCode (String)`: Optional code (e.g., 200-301, SY0-701).
+* `TimeLimit (Integer)`: Duration of the exam in minutes.
+* `Passmark (Integer)`: Minimum passing score out of 1000.
 
-## ❓ Question Types & Definitions
-An optional "ExhibitBase64" field containing a Base64-encoded JPEG/PNG string can be added to any question type to attach an image/diagram.
+### ❓ Question Types & Definitions
+An optional `"ExhibitBase64"` field containing a Base64-encoded JPEG/PNG string can be added to any question type to attach an image/diagram.
 
 1. Single Choice
-* Set '"IsMultipleChoice"': false.
-*Set '"Answer"' to the single correct letter (e.g., '"A"').
+ * Set `"IsMultipleChoice"`: false.
+ * Set `"Answer"` to the single correct letter (e.g., `"A"`).
 
 2. Multiple Choice
-* Set '"IsMultipleChoice": true'.
-* Set '"Answers"' to all correct letters concatenated (e.g., '"AC"' for options A and C) or an array of strings.
+ * Set `"IsMultipleChoice": true`.
+ * Set `"Answers"` to all correct letters concatenated (e.g., `"AC"` for options A and C) or an array of strings.
 
 3. Fill-in-the-Blank
-* Set "IsFillInTheBlank": true.
-* Place three underscores (___) in the "Text" field for every required answer.
-* Define "Blanks" or "Answers" as an array containing the exact text values for each placeholder in sequence.
+ * Set "IsFillInTheBlank": true.
+ * Place three underscores (___) in the "Text" field for every required answer.
+ * Define "Blanks" or "Answers" as an array containing the exact text values for each placeholder in sequence.
 
 4. Drag & Drop (Matching, Ordering & Distractors)
-* Set "IsDragAndDrop": true.
-* "Draggables" (Array of Strings): Contains all draggable items, including correct answers and optional distractors (extra items that don't belong to any target).
-* "Targets" (Array of Objects): Contains target slots with "Label" (category name or step number) and the correct "Answer".
+ * Set "IsDragAndDrop": true.
+ * "Draggables" (Array of Strings): Contains all draggable items, including correct answers and optional distractors (extra items that don't belong to any target).
+ * "Targets" (Array of Objects): Contains target slots with "Label" (category name or step number) and the correct "Answer".
 
-## 📋 Full JSON Example Specification
+### 📋 Full JSON Example Specification
 
 ```json
 {
@@ -280,7 +280,7 @@ An optional "ExhibitBase64" field containing a Base64-encoded JPEG/PNG string ca
 }
 ```
 
-⚖️ License & Legal
+### ⚖️ License & Legal
 Copyright © 2026 mesgas (Mario Messina). All rights reserved.
 
 FreeRange Exam Suite™, FreeRange Exam Simulator™, and FreeRange Exam Builder™ are trademarks of mesgas.
