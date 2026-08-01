@@ -289,54 +289,89 @@ Copy and paste the following prompt into your favorite AI, then paste your raw e
 <details>
 <summary><b>Click to expand and copy the AI Prompt</b></summary>
 
-> You are an expert IT certification instructor and a strict JSON parser. I will provide you with raw text extracted from certification exam dumps. Your task is to convert these questions into a specific JSON array format compatible with the FreeRange Exam Suite.
+> You are an expert IT certification instructor and a strict JSON data converter.
+> I will provide you with raw text extracted from certification exam dumps. Your task is to convert these questions into a specific JSON array format compatible with the FreeRange Exam Suite.
 > 
-> You MUST generate a brief, accurate explanation for the correct answer in the `Explanation` field.
+> You MUST generate a brief, accurate explanation for the correct answer in the `Explanation` field for every question.
 > 
-> Follow this exact JSON structure template. Adapt the boolean flags (`IsMultipleChoice`, `IsDragAndDrop`, `IsFillInTheBlank`) and the specific fields based on the question type:
+> **CRITICAL RULE**: You must choose ONE of the following precise JSON structures based on the question type. Do NOT mix fields between types (e.g., never put "Targets" in a Multiple Choice question).
 > 
+> ---
+> **TEMPLATE 1: SINGLE CHOICE**
 > ```json
-> [
->   {
->     "Id": 1,
->     "Topic": "Infer a short category considering the official exam sillabus (e.g., Routing, Security)",
->     "Text": "The exact question text. Use ___ for fill-in-the-blank placeholders.",
->     "Explanation": "A generated explanation of WHY the answer is correct.",
->     
->     "IsMultipleChoice": false,
->     "IsFillInTheBlank": false,
->     "IsDragAndDrop": false,
->     
->     "Answer": "A", 
->     "Answers": ["A", "C"], 
->     
->     "Options": [
->       { "Alphabet": "A", "Text": "Option text" },
->       { "Alphabet": "B", "Text": "Option text" }
->     ],
->     
->     "Blanks": [
->       "Word 1",
->       "Word 2"
->     ],
->     
->     "Draggables": [
->       "Item 1",
->       "Item 2 (Distractor)"
->     ],
->     "Targets": [
->       { "Label": "Drop Zone 1", "Answer": "Item 1" }
->     ]
->   }
-> ]
+> {
+>   "Id": 1,
+>   "Topic": "Infer short category",
+>   "Text": "Question text here?",
+>   "IsMultipleChoice": false,
+>   "Answer": "A",
+>   "Options": [
+>     { "Alphabet": "A", "Text": "First option" },
+>     { "Alphabet": "B", "Text": "Second option" }
+>   ],
+>   "Explanation": "Generated explanation of why A is correct."
+> }
 > ```
 > 
-> **CRITICAL INSTRUCTIONS:**
-> 1. Output ONLY valid, parsable JSON. 
-> 2. Ensure all quotes inside strings are properly escaped. 
-> 3. Do not include ALL fields in every question. Only include the fields relevant to the specific question type (e.g., do not include `Targets` in a Multiple Choice question).
-> 4. The output must be an array of objects `[ { ... }, { ... } ]`. 
-> 5. Do NOT output any markdown formatting, code blocks, or conversational text. Start directly with `[` and end with `]`.
+> **TEMPLATE 2: MULTIPLE CHOICE (2 or more correct answers)**
+> ```json
+> {
+>   "Id": 2,
+>   "Topic": "Infer short category",
+>   "Text": "Select two protocols:",
+>   "IsMultipleChoice": true,
+>   "Answers": ["A", "C"],
+>   "Options": [
+>     { "Alphabet": "A", "Text": "First option" },
+>     { "Alphabet": "B", "Text": "Second option" },
+>     { "Alphabet": "C", "Text": "Third option" }
+>   ],
+>   "Explanation": "Generated explanation of why A and C are correct."
+> }
+> ```
+> 
+> **TEMPLATE 3: DRAG AND DROP (Matching / Ordering)**
+> ```json
+> {
+>   "Id": 3,
+>   "Topic": "Infer short category",
+>   "Text": "Match the items to their layers.",
+>   "IsDragAndDrop": true,
+>   "Draggables": [
+>     "Item 1",
+>     "Item 2",
+>     "Unused Distractor"
+>   ],
+>   "Targets": [
+>     { "Label": "Drop Zone 1", "Answer": "Item 1" },
+>     { "Label": "Drop Zone 2", "Answer": "Item 2" }
+>   ],
+>   "Explanation": "Generated explanation of the matching logic."
+> }
+> ```
+> 
+> **TEMPLATE 4: FILL IN THE BLANK**
+> (Replace the missing words in the `Text` with exactly three underscores `___`)
+> ```json
+> {
+>   "Id": 4,
+>   "Topic": "Infer short category",
+>   "Text": "The protocol is ___ and the port is ___.",
+>   "IsFillInTheBlank": true,
+>   "Blanks": [
+>     "HTTP",
+>     "80"
+>   ],
+>   "Explanation": "Generated explanation for the blanks."
+> }
+> ```
+> ---
+> 
+> **STRICT OUTPUT CONSTRAINTS:**
+> 1. Output ONLY valid, parsable JSON.
+> 2. The output MUST be a single JSON array containing the question objects: `[ { ... }, { ... } ]`.
+> 3. Escape all quotes inside strings properly (`\"`).
+> 4. Do NOT output any markdown formatting (do not use ```json). Start directly with `[` and end with `]`.
 
 </details>
 
