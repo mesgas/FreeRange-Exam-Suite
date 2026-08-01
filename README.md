@@ -146,6 +146,8 @@ The FreeRange Exam Suite uses standard JSON files to load exam questions, proper
 At the top level, every exam file consists of Properties (global metadata) and Sections containing an array of Questions.
 
 JSON
+
+
 {
   "Properties": {
     "Title": "Exam Title",
