@@ -137,3 +137,153 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 1. Download `FreeRangeExamSuite_3.6.0.0.exe` from the [Releases](../../releases) section or install it directly via the **Microsoft Store**. (Certification still in progress)
 2. Double-click the `.exe` file to launch the native Windows App Installer.
 3. Launch **FreeRange Exam Simulator** or **FreeRange Exam Builder** directly from the Start Menu.
+
+
+📄 Exam JSON File Structure & Specification (v3.6.0.0)
+The FreeRange Exam Suite uses standard JSON files to load exam questions, properties, and exhibits. This document outlines the schema specification and provides examples for all supported question types.
+
+🛠️ General Schema Overview
+At the top level, every exam file consists of Properties (global metadata) and Sections containing an array of Questions.
+
+JSON
+{
+  "Properties": {
+    "Title": "Exam Title",
+    "ExamCode": "EXAM-CODE",
+    "TimeLimit": 60,
+    "Passmark": 700
+  },
+  "Sections": [
+    {
+      "Title": "General",
+      "Questions": [ /* Array of Question Objects */ ]
+    }
+  ]
+}
+Metadata Fields
+Title (String): Display name of the exam.
+
+ExamCode (String): Optional code (e.g., 200-301, SY0-701).
+
+TimeLimit (Integer): Duration of the exam in minutes.
+
+Passmark (Integer): Minimum passing score out of 1000.
+
+❓ Question Types & Definitions
+An optional "ExhibitBase64" field containing a Base64-encoded JPEG/PNG string can be added to any question type to attach an image/diagram.
+
+1. Single Choice
+Set "IsMultipleChoice": false.
+
+Set "Answer" to the single correct letter (e.g., "A").
+
+2. Multiple Choice
+Set "IsMultipleChoice": true.
+
+Set "Answers" to all correct letters concatenated (e.g., "AC" for options A and C) or an array of strings.
+
+3. Fill-in-the-Blank
+Set "IsFillInTheBlank": true.
+
+Place three underscores (___) in the "Text" field for every required answer.
+
+Define "Blanks" or "Answers" as an array containing the exact text values for each placeholder in sequence.
+
+4. Drag & Drop (Matching, Ordering & Distractors)
+Set "IsDragAndDrop": true.
+
+"Draggables" (Array of Strings): Contains all draggable items, including correct answers and optional distractors (extra items that don't belong to any target).
+
+"Targets" (Array of Objects): Contains target slots with "Label" (category name or step number) and the correct "Answer".
+
+📋 Full JSON Example Specification
+JSON
+{
+  "Properties": {
+    "Title": "Cisco CCNA - Full Practice Exam",
+    "ExamCode": "200-301",
+    "TimeLimit": 90,
+    "Passmark": 825
+  },
+  "Sections": [
+    {
+      "Title": "General",
+      "Questions": [
+
+        {
+          "Id": 1,
+          "Topic": "Network Fundamentals",
+          "Text": "Which protocol operates at the Transport Layer (Layer 4) of the OSI model?",
+          "IsMultipleChoice": false,
+          "Answer": "A",
+          "Options": [
+            { "Alphabet": "A", "Text": "TCP (Transmission Control Protocol)" },
+            { "Alphabet": "B", "Text": "IP (Internet Protocol)" },
+            { "Alphabet": "C", "Text": "HTTP (Hypertext Transfer Protocol)" },
+            { "Alphabet": "D", "Text": "Ethernet" }
+          ],
+          "ExhibitBase64": "OPTIONAL_BASE64_IMAGE_STRING"
+        },
+
+        {
+          "Id": 2,
+          "Topic": "Network Fundamentals",
+          "Text": "Select the TWO protocols that operate at the Application Layer.",
+          "IsMultipleChoice": true,
+          "Answers": "AC",
+          "Options": [
+            { "Alphabet": "A", "Text": "DNS" },
+            { "Alphabet": "B", "Text": "ICMP" },
+            { "Alphabet": "C", "Text": "HTTPS" },
+            { "Alphabet": "D", "Text": "UDP" }
+          ]
+        },
+
+        {
+          "Id": 3,
+          "Topic": "Wireless Fundamentals",
+          "IsFillInTheBlank": true,
+          "Text": "In a wireless network, the human-readable network name is the ___ while the physical MAC address of the Access Point radio is the ___ .",
+          "Blanks": [
+            "SSID",
+            "BSSID"
+          ]
+        },
+
+        {
+          "Id": 4,
+          "Topic": "OSI Model",
+          "IsDragAndDrop": true,
+          "Text": "Match each Protocol Data Unit (PDU) to its corresponding OSI Layer.",
+          "Draggables": [
+            "Frame",
+            "Packet",
+            "Segment",
+            "Data",
+            "Bits (Unused Distractor)"
+          ],
+          "Targets": [
+            {
+              "Label": "Layer 2 - Data Link",
+              "Answer": "Frame"
+            },
+            {
+              "Label": "Layer 3 - Network",
+              "Answer": "Packet"
+            },
+            {
+              "Label": "Layer 4 - Transport",
+              "Answer": "Segment"
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}
+⚖️ License & Legal
+Copyright © 2026 mesgas (Mario Messina). All rights reserved.
+
+FreeRange Exam Suite™, FreeRange Exam Simulator™, and FreeRange Exam Builder™ are trademarks of mesgas.
+All other trademarks, product names, logos, and certification names mentioned within the application (including but not limited to Cisco®, Microsoft®, CompTIA®, AWS®, or other third-party vendor certification programs) belong to their respective owners. Their use within this software is solely for descriptive and educational purposes to identify exam compatibility and does not imply any affiliation, sponsorship, or endorsement by the trademark holders.
