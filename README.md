@@ -58,7 +58,7 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 | :---: | :--- | :---: | :--- |
 | 🇮🇹 | Italian | 🇩🇪 | German |
 | 🇬🇧 | English | 🇵🇹 | Portuguese |
-| 🇪🇸 | Spanish | 🇳🇱 | Dutch |
+| 🇪🇸 | Spanish | 🇨🇿 | Czech |
 | 🇫🇷 | French | | |
 
 ---
@@ -74,9 +74,10 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 
 ## 🚀 What's New in Version 3.6.0.0
 
+* **Fully Revamped UI**: A completely revised and improved graphical interface, offering a more modern, cleaner, and highly intuitive user experience.
+* **Complete Codebase Overhaul**: The underlying application code has been entirely refactored and optimized from the ground up for maximum stability and performance.
 * **Evaluation Engine Fix**: Resolved a critical bug where shuffling options caused incorrect grading for Multiple Choice and list-based answers.
 * **Dynamic UI Translations**: The "Info/About" screen now fully supports dynamic translations based on the user's selected UI language.
-* **Performance Optimization**: Streamlined default embedded Base64 image resources for a lighter application footprint.
 * **Microsoft Store Readiness**: Replaced the legacy installer with a fully compliant MSIX package (`FreeRangeExamSuite_3.6.0.0.msix`), ensuring seamless installation, secure sandboxing, and direct validation through the Microsoft Store.
 
 ---
@@ -133,12 +134,6 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 ## 📦 Installation & Quick Start
 
 ### MSIX Package (Recommended)
-1. Download `FreeRangeExamSuite_3.6.0.0.msix` from the [Releases](../../releases) section or install it directly via the **Microsoft Store**.
-2. Double-click the `.msix` file to launch the native Windows App Installer.
+1. Download `FreeRangeExamSuite_3.6.0.0.exe` from the [Releases](../../releases) section or install it directly via the **Microsoft Store**. (Certification still in progress)
+2. Double-click the `.exe` file to launch the native Windows App Installer.
 3. Launch **FreeRange Exam Simulator** or **FreeRange Exam Builder** directly from the Start Menu.
-
-### Running from Python Source
-Ensure Python 3.10+ is installed along with Pillow:
-
-```bash
-pip install pillow
