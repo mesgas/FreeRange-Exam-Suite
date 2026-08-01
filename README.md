@@ -299,71 +299,90 @@ Copy and paste the following prompt into your favorite AI, then paste your raw e
 > ---
 > **TEMPLATE 1: SINGLE CHOICE**
 > ```json
-> {
->   "Id": 1,
->   "Topic": "Infer short category",
->   "Text": "Question text here?",
->   "IsMultipleChoice": false,
->   "Answer": "A",
->   "Options": [
->     { "Alphabet": "A", "Text": "First option" },
->     { "Alphabet": "B", "Text": "Second option" }
->   ],
->   "Explanation": "Generated explanation of why A is correct."
-> }
-> ```
-> 
-> **TEMPLATE 2: MULTIPLE CHOICE (2 or more correct answers)**
-> ```json
-> {
->   "Id": 2,
->   "Topic": "Infer short category",
->   "Text": "Select two protocols:",
->   "IsMultipleChoice": true,
->   "Answers": ["A", "C"],
->   "Options": [
->     { "Alphabet": "A", "Text": "First option" },
->     { "Alphabet": "B", "Text": "Second option" },
->     { "Alphabet": "C", "Text": "Third option" }
->   ],
->   "Explanation": "Generated explanation of why A and C are correct."
-> }
-> ```
-> 
-> **TEMPLATE 3: DRAG AND DROP (Matching / Ordering)**
-> ```json
-> {
->   "Id": 3,
->   "Topic": "Infer short category",
->   "Text": "Match the items to their layers.",
->   "IsDragAndDrop": true,
->   "Draggables": [
->     "Item 1",
->     "Item 2",
->     "Unused Distractor"
->   ],
->   "Targets": [
->     { "Label": "Drop Zone 1", "Answer": "Item 1" },
->     { "Label": "Drop Zone 2", "Answer": "Item 2" }
->   ],
->   "Explanation": "Generated explanation of the matching logic."
-> }
-> ```
-> 
-> **TEMPLATE 4: FILL IN THE BLANK**
-> (Replace the missing words in the `Text` with exactly three underscores `___`)
-> ```json
-> {
->   "Id": 4,
->   "Topic": "Infer short category",
->   "Text": "The protocol is ___ and the port is ___.",
->   "IsFillInTheBlank": true,
->   "Blanks": [
->     "HTTP",
->     "80"
->   ],
->   "Explanation": "Generated explanation for the blanks."
-> }
+{
+  "Properties": {
+    "Title": "Cisco CCNA - Full Practice Exam",
+    "ExamCode": "200-301",
+    "TimeLimit": 90,
+    "Passmark": 825
+  },
+  "Sections": [
+    {
+      "Title": "General",
+      "Questions": [
+
+        {
+          "Id": 1,
+          "Topic": "Network Fundamentals",
+          "Text": "Which protocol operates at the Transport Layer (Layer 4) of the OSI model?",
+          "IsMultipleChoice": false,
+          "Answer": "A",
+          "Options": [
+            { "Alphabet": "A", "Text": "TCP (Transmission Control Protocol)" },
+            { "Alphabet": "B", "Text": "IP (Internet Protocol)" },
+            { "Alphabet": "C", "Text": "HTTP (Hypertext Transfer Protocol)" },
+            { "Alphabet": "D", "Text": "Ethernet" }
+          ],
+          "ExhibitBase64": "OPTIONAL_BASE64_IMAGE_STRING"
+        },
+
+        {
+          "Id": 2,
+          "Topic": "Network Fundamentals",
+          "Text": "Select the TWO protocols that operate at the Application Layer.",
+          "IsMultipleChoice": true,
+          "Answers": "AC",
+          "Options": [
+            { "Alphabet": "A", "Text": "DNS" },
+            { "Alphabet": "B", "Text": "ICMP" },
+            { "Alphabet": "C", "Text": "HTTPS" },
+            { "Alphabet": "D", "Text": "UDP" }
+          ]
+        },
+
+        {
+          "Id": 3,
+          "Topic": "Wireless Fundamentals",
+          "IsFillInTheBlank": true,
+          "Text": "In a wireless network, the human-readable network name is the ___ while the physical MAC address of the Access Point radio is the ___ .",
+          "Blanks": [
+            "SSID",
+            "BSSID"
+          ]
+        },
+
+        {
+          "Id": 4,
+          "Topic": "OSI Model",
+          "IsDragAndDrop": true,
+          "Text": "Match each Protocol Data Unit (PDU) to its corresponding OSI Layer.",
+          "Draggables": [
+            "Frame",
+            "Packet",
+            "Segment",
+            "Data",
+            "Bits (Unused Distractor)"
+          ],
+          "Targets": [
+            {
+              "Label": "Layer 2 - Data Link",
+              "Answer": "Frame"
+            },
+            {
+              "Label": "Layer 3 - Network",
+              "Answer": "Packet"
+            },
+            {
+              "Label": "Layer 4 - Transport",
+              "Answer": "Segment"
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}
 > ```
 > ---
 > 
