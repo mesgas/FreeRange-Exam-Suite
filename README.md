@@ -299,7 +299,7 @@ Copy and paste the following prompt into your favorite AI, then paste your raw e
 > [
 >   {
 >     "Id": 1,
->     "Topic": "Infer a short category (e.g., Routing, Security)",
+>     "Topic": "Infer a short category considering the official exam sillabus (e.g., Routing, Security)",
 >     "Text": "The exact question text. Use ___ for fill-in-the-blank placeholders.",
 >     "Explanation": "A generated explanation of WHY the answer is correct.",
 >     
