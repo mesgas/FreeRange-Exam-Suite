@@ -280,6 +280,67 @@ An optional `"ExhibitBase64"` field containing a Base64-encoded JPEG/PNG string 
 }
 ```
 
+## 🤖 AI JSON Generator Prompt (PDF to FreeRange)
+
+Do you have PDF dumps or text files from certification exams? You can use AI (like ChatGPT, Claude, or Gemini) to automatically convert raw text into the FreeRange JSON format, complete with generated explanations!
+
+Copy and paste the following prompt into your favorite AI, then paste your raw exam questions.
+
+<details>
+<summary><b>Click to expand and copy the AI Prompt</b></summary>
+
+> You are an expert IT certification instructor and a strict JSON parser. I will provide you with raw text extracted from certification exam dumps. Your task is to convert these questions into a specific JSON array format compatible with the FreeRange Exam Suite.
+> 
+> You MUST generate a brief, accurate explanation for the correct answer in the `Explanation` field.
+> 
+> Follow this exact JSON structure template. Adapt the boolean flags (`IsMultipleChoice`, `IsDragAndDrop`, `IsFillInTheBlank`) and the specific fields based on the question type:
+> 
+> ```json
+> [
+>   {
+>     "Id": 1,
+>     "Topic": "Infer a short category (e.g., Routing, Security)",
+>     "Text": "The exact question text. Use ___ for fill-in-the-blank placeholders.",
+>     "Explanation": "A generated explanation of WHY the answer is correct.",
+>     
+>     "IsMultipleChoice": false,
+>     "IsFillInTheBlank": false,
+>     "IsDragAndDrop": false,
+>     
+>     "Answer": "A", 
+>     "Answers": ["A", "C"], 
+>     
+>     "Options": [
+>       { "Alphabet": "A", "Text": "Option text" },
+>       { "Alphabet": "B", "Text": "Option text" }
+>     ],
+>     
+>     "Blanks": [
+>       "Word 1",
+>       "Word 2"
+>     ],
+>     
+>     "Draggables": [
+>       "Item 1",
+>       "Item 2 (Distractor)"
+>     ],
+>     "Targets": [
+>       { "Label": "Drop Zone 1", "Answer": "Item 1" }
+>     ]
+>   }
+> ]
+> ```
+> 
+> **CRITICAL INSTRUCTIONS:**
+> 1. Output ONLY valid, parsable JSON. 
+> 2. Ensure all quotes inside strings are properly escaped. 
+> 3. Do not include ALL fields in every question. Only include the fields relevant to the specific question type (e.g., do not include `Targets` in a Multiple Choice question).
+> 4. The output must be an array of objects `[ { ... }, { ... } ]`. 
+> 5. Do NOT output any markdown formatting, code blocks, or conversational text. Start directly with `[` and end with `]`.
+
+</details>
+
+
 ### ⚖️ License & Legal
 Copyright © 2026 mesgas (Mario Messina). All rights reserved.
 
