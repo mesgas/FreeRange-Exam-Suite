@@ -165,10 +165,10 @@ At the top level, every exam file consists of `Properties` (global metadata) and
 ```
 
 ### Metadata Fields
-* ** `Title (String)`: Display name of the exam.
-* ** `ExamCode (String)`: Optional code (e.g., 200-301, SY0-701).
-* ** `TimeLimit (Integer)`: Duration of the exam in minutes.
-* ** `Passmark (Integer)`: Minimum passing score out of 1000.
+   * `Title (String)`: Display name of the exam.
+   * `ExamCode (String)`: Optional code (e.g., 200-301, SY0-701).
+   * `TimeLimit (Integer)`: Duration of the exam in minutes.
+   * `Passmark (Integer)`: Minimum passing score out of 1000.
 
 ### ❓ Question Types & Definitions
 An optional `"ExhibitBase64"` field containing a Base64-encoded JPEG/PNG string can be added to any question type to attach an image/diagram.
