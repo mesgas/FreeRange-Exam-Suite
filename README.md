@@ -145,7 +145,7 @@ The FreeRange Exam Suite uses standard JSON files to load exam questions, proper
 🛠️ General Schema Overview
 At the top level, every exam file consists of Properties (global metadata) and Sections containing an array of Questions.
 
-JSON
+```JSON
 
 
 {
@@ -162,6 +162,8 @@ JSON
     }
   ]
 }
+```
+
 Metadata Fields
 Title (String): Display name of the exam.
 
@@ -200,7 +202,9 @@ Set "IsDragAndDrop": true.
 
 📋 Full JSON Example Specification
 
+## 📋 Full JSON Example Specification
 
+```json
 {
   "Properties": {
     "Title": "Cisco CCNA - Full Practice Exam",
@@ -285,7 +289,7 @@ Set "IsDragAndDrop": true.
     }
   ]
 }
-
+```
 
 ⚖️ License & Legal
 Copyright © 2026 mesgas (Mario Messina). All rights reserved.
