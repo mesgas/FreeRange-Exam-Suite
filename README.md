@@ -133,7 +133,7 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 
 ## 📦 Installation & Quick Start
 
-### MSIX Package (Recommended)
+### EXE Package (Recommended)
 1. Download `FreeRangeExamSuite_3.6.0.0.exe` from the [Releases](../../releases) section or install it directly via the **Microsoft Store**. (Certification still in progress)
 2. Double-click the `.exe` file to launch the native Windows App Installer.
 3. Launch **FreeRange Exam Simulator** or **FreeRange Exam Builder** directly from the Start Menu.
