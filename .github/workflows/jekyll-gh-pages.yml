@@ -1,0 +1,45 @@
+# Workflow per pubblicare il file index.html statico su GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Si avvia in automatico quando fai una modifica al branch "main"
+  push:
+    branches: ["main"]
+
+  # Ti permette di avviarlo anche manualmente dalla tab "Actions"
+  workflow_dispatch:
+
+# Imposta i permessi necessari per scrivere su GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Evita che partano più pubblicazioni sovrapposte
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Unico job di deploy (non serve la fase di build perché è HTML puro)
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del codice
+        uses: actions/checkout@v4
+        
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+        
+      - name: Carica i file (Artifact)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Carica l'intera cartella root dove si trova il tuo index.html
+          path: '.'
+          
+      - name: Pubblica su GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
