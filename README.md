@@ -78,7 +78,7 @@ Both the Simulator and Builder feature a built-in language selection screen upon
 * **Complete Codebase Overhaul**: The underlying application code has been entirely refactored and optimized from the ground up for maximum stability and performance.
 * **Evaluation Engine Fix**: Resolved a critical bug where shuffling options caused incorrect grading for Multiple Choice and list-based answers.
 * **Dynamic UI Translations**: The "Info/About" screen now fully supports dynamic translations based on the user's selected UI language.
-* **Microsoft Store Readiness**: Replaced the legacy installer with a fully compliant MSIX package (`FreeRangeExamSuite_3.6.0.0.msix`), ensuring seamless installation, secure sandboxing, and direct validation through the Microsoft Store.
+* **Microsoft Store Readiness**: Replaced the legacy installer with a fully compliant MSIX package (`FreeRangeExamSuite_3.6.0.0.msix`), ensuring seamless installation, secure sandboxing, and direct validation through the Microsoft Store. (Certification in progress)
 
 ---
 
