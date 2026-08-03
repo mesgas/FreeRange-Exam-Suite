@@ -1,6 +1,6 @@
-# 🐔 FreeRange Exam Suite (v3.6.0.0)
+# 🐔 FreeRange Exam Suite (v3.6.1.0)
 
-![Version](https://img.shields.io/badge/version-3.6.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-3.6.1.0-blue.svg)
 ![Security](https://img.shields.io/badge/security-100%25_Offline_/_Air--Gapped-green.svg)
 ![Languages](https://img.shields.io/badge/languages-7_Supported-orange.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)
